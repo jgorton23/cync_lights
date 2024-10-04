@@ -743,7 +743,9 @@ class CyncUserData:
         devices = {}
         rooms = {}
         homes = await self._get_homes()
+        _LOGGER.info(f'Found {len(homes)} homes')
         for home in homes:
+            _LOGGER.debug(f'home: {home}')
             home_info = await self._get_home_properties(home['product_id'], home['id'])
             if home_info.get('groupsArray',False) and home_info.get('bulbsArray',False) and len(home_info['groupsArray']) > 0 and len(home_info['bulbsArray']) > 0:
                 home_id = str(home['id'])
