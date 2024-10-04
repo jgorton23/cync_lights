@@ -1,6 +1,6 @@
 {
   "domain": "cync_lights",
-  "name": "Cync Lights",
+  "name": "Cync Lights Custom",
   "version": "1.0.1",
   "config_flow": true,
   "documentation": "https://github.com/nikshriv/cync_lights",
