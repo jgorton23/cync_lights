@@ -1,6 +1,6 @@
 {
   "domain": "cync_lights",
-  "name": "Cync Lights Custom",
+  "name": "Cync Lights Customized",
   "version": "1.0.1",
   "config_flow": true,
   "documentation": "https://github.com/nikshriv/cync_lights",
@@ -9,7 +9,7 @@
   "homekit": {},
   "dependencies": [],
   "codeowners": [
-    "@nikshriv"
+    "@jgorton23"
   ],
   "iot_class": "local_push"
 }
