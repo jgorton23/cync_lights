@@ -745,8 +745,9 @@ class CyncUserData:
         homes = await self._get_homes()
         _LOGGER.info(f'Found {len(homes)} homes')
         for home in homes:
-            _LOGGER.debug(f'home: {home}')
+            _LOGGER.info(f'home: {home}')
             home_info = await self._get_home_properties(home['product_id'], home['id'])
+            _LOGGER.info(f'home_info: {home_info}')
             if home_info.get('groupsArray',False) and home_info.get('bulbsArray',False) and len(home_info['groupsArray']) > 0 and len(home_info['bulbsArray']) > 0:
                 home_id = str(home['id'])
                 bulbs_array_length = max([((device['deviceID'] % home['id']) % 1000) + (int((device['deviceID'] % home['id']) / 1000)*256) for device in home_info['bulbsArray']]) + 1
